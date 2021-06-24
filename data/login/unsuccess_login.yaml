@@ -1,0 +1,22 @@
+-
+  url: https://passport.xfyun.cn/login
+  #元素定位
+  user:
+    method: id
+    content: username
+  password:
+    method: id
+    content: password
+  button1:
+    method: xpath
+    content: //*[@id="app"]/div/section/div/div/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div[3]
+  button2:
+    method: xpath
+    content: //*[@id="app"]/div/section/div/div/div[2]/div/div[2]/div/form/button
+  excepted:
+    method: xpath
+    content: //*[@id="__next"]/div[1]/div[1]/div[1]/div/div[1]
+  #输入内容
+  browser_type: Chrome
+  account_txt: abc
+  password_txt: def

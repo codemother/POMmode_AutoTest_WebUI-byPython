@@ -36,4 +36,9 @@ class baseclass:
     #退出
     def quit(self):
         self.driver.close()
-
+    #进入到iframe页
+    def switch_to(self,iframe):
+        self.driver.switch_to.frame(iframe)
+    #退出iframe页
+    def switch_out(self):
+        self.driver.switch_to.default_content()
