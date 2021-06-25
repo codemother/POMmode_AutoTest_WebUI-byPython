@@ -42,3 +42,21 @@ class baseclass:
     #退出iframe页
     def switch_out(self):
         self.driver.switch_to.default_content()
+    #检测滑动验证框
+    def confirm(self,kwargs):
+        sleep(1)
+        try:
+            self.locate((kwargs['confirm']['method'],kwargs['confirm']['content']))
+            sleep(6)
+        except:
+            print('没有出现验证框')
+    #检测期望元素是否存在
+    def judgeExist(self,kwargs,exceptednum):
+        flag = kwargs[exceptednum]['exist?']
+        try:
+            sleep(0.5)
+            self.locate((kwargs[exceptednum]['method'], kwargs[exceptednum]['content']))
+        except:
+            flag = not flag
+        assert flag, kwargs[exceptednum]['wrongmsg']
+

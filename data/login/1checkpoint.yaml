@@ -1,0 +1,66 @@
+-
+  url: https://passport.xfyun.cn/login
+#流程元素定位
+  #用户名输入框
+  user:
+    method: id
+    content: username
+  #密码输入框
+  password:
+    method: id
+    content: password
+  #切换到账号密码登录按钮
+  button1:
+    method: xpath
+    content: //*[@id="app"]/div/section/div/div/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div[3]
+  #登录按钮
+  button2:
+    method: xpath
+    content: //*[@id="app"]/div/section/div/div/div[2]/div/div[2]/div/form/button
+  #滑动验证弹出框
+  confirm:
+    method: xpath
+    content: //*[@class="geetest_panel geetest_wind"]
+#期望元素定位,期望值,错误提示信息
+  excepted1:
+    method: xpath
+    content: //*[@class="ant-form-explain"][text()="请输入6-20位密码"]
+    exist?: True
+    wrongmsg: 没有出现密码长度不足提示
+#输入内容
+  browser_type: Chrome
+  account_txt: abc
+  password_txt: def
+-
+  url: https://passport.xfyun.cn/login
+#流程元素定位
+  #用户名输入框
+  user:
+    method: id
+    content: username
+  #密码输入框
+  password:
+    method: id
+    content: password
+  #切换到账号密码登录按钮
+  button1:
+    method: xpath
+    content: //*[@id="app"]/div/section/div/div/div[2]/div/div[1]/div[2]/div[1]/div/div/div/div/div[1]/div[3]
+  #登录按钮
+  button2:
+    method: xpath
+    content: //*[@id="app"]/div/section/div/div/div[2]/div/div[2]/div/form/button
+  #滑动验证弹出框
+  confirm:
+    method: xpath
+    content: //*[@class="geetest_panel_box geetest_panelshowslide"]
+#期望元素定位,期望存在与否,错误提示信息
+  excepted1:
+    method: xpath
+    content: //*[@id="__next"]/div[1]/div[1]/div[1]/div/div[1]
+    exist?: True
+    wrongmsg: 不能正常登录
+#输入内容
+  browser_type: Chrome
+  account_txt: 18856412295
+  password_txt: a13135428712
