@@ -47,7 +47,7 @@ class baseclass:
         sleep(1)
         try:
             self.locate((kwargs['confirm']['method'],kwargs['confirm']['content']))
-            sleep(6)
+            sleep(5)
         except:
             print('没有出现验证框')
     #检测期望元素是否存在
