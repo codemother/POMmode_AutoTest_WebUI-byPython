@@ -44,7 +44,7 @@ class baseclass:
         self.driver.switch_to.default_content()
     #检测滑动验证框
     def confirm(self,kwargs):
-        sleep(1)
+        sleep(2)#等待验证框加载出来
         try:
             self.locate((kwargs['confirm']['method'],kwargs['confirm']['content']))
             sleep(5)
